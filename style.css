@@ -118,33 +118,44 @@ body{
     left: 20px;
 }
 
+#mobile{
+    display: none;
+    align-items: center;
+}
+
+#close{
+    display: none;
+}
+
 /* home page */
 #hero{
-    height: 40vh;
-    width: 100%;
-    max-width: 1200px;
-    background-size: cover;
-    background-color: whitesmoke;
-    background-position: top 25% right 0;
-    padding: 30px 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: flex-start;
     text-align: left;
-    position: relative;
-    overflow: hidden;
-    margin: 20px auto;
+    width: 100%;
     height: auto;
+    background-size: cover;
+    background-color: whitesmoke;
+    background-position: center;
+    padding: 30px 40px;
+    margin: 20px auto;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     border-radius: 8px;
-    margin-top: 25px;
+    position: relative;
+    overflow: hidden;
 }
 
 #hero h2{
     color: black;
     margin-bottom: 15px;
+    font-size: 2em;
 }
 
 #hero p{
     color: black;
+    font-size: 1em;
 }
 
 #hero button{
@@ -156,7 +167,8 @@ body{
     cursor: pointer;
     border: none;
     outline: none;
-    padding: 14px 40px 14px 40px;
+    padding: 14px 40px;
+    margin-top: 20px;
 }
 
 #hero button:hover{
@@ -169,17 +181,19 @@ body{
     background: url('img/banner.jpg') no-repeat center center;
     background-size: contain;
     position: absolute;
-    right: 2%;
+    right: 5%;
     top: 50%;
     transform: translateY(-50%);
     width: 400px;
-    height: 300px;
+    height: 200px;
     z-index: 1;
 }
 
 /* Mengatur z-index untuk konten agar tetap di atas */
 #hero h2, #hero p, #hero button {
     z-index: 2;
+    position: relative;
+    max-width: 50%;
 }
 
 #feature{
@@ -317,23 +331,34 @@ body{
     justify-content: center;
     align-items: left;
     text-align: left;
-    background-image: url(img/banner2.jpg);
+    background-image: url(img/banner3.jpg);
     width: flex;
     height: 50vh;
     background-size: cover;
     background-position: center;
 }
 
-#sm-banner h4{
-    font-size: 22px;
-    font-weight: 700;
-    color: white;
+#sm-banner .text-container {
+    background-color: rgba(255, 255, 255, 0.7); /* Latar belakang putih transparan untuk semua teks */
+    padding: 20px;
+    border-radius: 10px; /* Tambahkan border-radius untuk efek melengkung */
 }
 
-#sm-banner p{
+#sm-banner h4, #sm-banner p {
+    color: black;
+    margin: 0; /* Hilangkan margin default */
+}
+
+#sm-banner h4 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 10px; /* Memberi jarak antara heading dan paragraph */
+}
+
+#sm-banner p {
     font-size: 14px;
     font-weight: 500;
-    color: white;
+    margin-bottom: 10px;
 }
 
 #sm-banner button:hover{
@@ -388,4 +413,226 @@ body{
     white-space: nowrap;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
+}
+
+footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+footer .col{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+footer .logo{
+    margin-bottom: 30px;
+}
+
+footer h4{
+    font-size: 14px;
+    padding-bottom: 20px;
+}
+
+footer p{
+    font-size: 13px;
+    margin: 0 0 8px 0;
+}
+
+footer a{
+    font-size: 13px;
+    text-decoration: none;
+    color: #222;
+    margin: 10px;
+}
+
+footer .follow{
+    margin-top: 20px;
+}
+
+footer .follow i{
+    color: #465b52;
+    padding-right: 4px;
+    cursor: pointer;
+}
+
+footer .install .row img{
+    border: 1px solid #088178;
+    border-radius: 6px;
+}
+
+footer .install img{
+    margin: 10px 0 15px 0;
+}
+
+footer .follow i:hover{
+    color: #088178;
+}
+
+footer .follow i:hover,
+footer a:hover{
+    color: #088178;
+}
+
+footer .copyright{
+    width: 100%;
+    text-align: center;
+}
+
+/* media styling (responsive) */
+@media (max-width:799px){
+
+    .section-p1{
+        padding: 40px 40px;
+    }
+
+    #navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: fixed;
+        top: 0;
+        right: -300px;
+        height: 100vh;
+        width: 300px;
+        background-color: #ec2127;
+        box-shadow: 0 40px 60px rgba(0, 0, 0, 0.01);
+        padding: 80px 0 0 10px;
+        transition: 0.3s;
+    }
+
+    #navbar.active{
+        right: 0px;
+    }
+
+    #navbar li{
+        margin-bottom: 25px;
+    }
+
+    #mobile{
+        display: flex;
+        align-items: center;
+    }
+
+    #mobile i{
+        color: white;
+        font-size: 24px;
+        padding-left: 20px;
+    }
+
+    #close{
+        display: initial;
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        color: white;
+        font-size: 24px;
+    }
+
+    #lg-bag{
+        display: none;
+    }
+
+    #feature {
+        justify-content: center;
+    }
+
+    #feature .fe-box {
+        margin: 15px 15px;
+    }
+
+    #product1 .pro-container {
+        justify-content: center;
+    }
+
+    #product1 .pro {
+        margin: 15px;
+    }
+
+    #hero {
+        height: 35vh;
+    }
+
+    #hero::after {
+        right: 1%;
+    }
+
+    #sm-banner {
+        height: 20vh;
+    }
+
+    #newsletter .form{
+        width: 70%;
+    }
+}
+
+@media (max-width: 477px){
+    .section-p1 {
+        padding: 20px;
+    }
+
+    #header {
+        padding: 10px 30px;
+    }
+
+    #hero h2 {
+        padding-top: 100%;
+    }
+
+    #hero {
+        height: auto;
+        background-size: cover;
+        background-color: whitesmoke;
+        background-position: center;
+        padding: 30px 40px;
+        margin: 20px auto;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        border-radius: 8px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    #hero::after {
+        top: 20%;
+        position: auto;
+        right: 0%;
+        left: -4%;
+        transform: translateY(-50%);
+        width: 400px;
+        height: 200px;
+        z-index: 1;
+    }
+
+    #feature {
+        justify-content: space-between;
+    }
+
+    #feature .fe-box {
+        width: 155px;
+        margin: 0 0 15px 0;
+    }
+
+    #product1 .pro {
+        width: 100%;
+    }
+    
+    #sm-banner {
+        height: 40vh;
+    }
+
+    #newsletter {
+        padding: 40px 20px;
+    }
+
+    #newsletter .form {
+        width: 100%;
+    }
+
+    footer .copyright {
+        text-align: start;
+    }
 }
