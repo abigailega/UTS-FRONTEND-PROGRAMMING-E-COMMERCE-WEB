@@ -34,40 +34,25 @@
 
         <section id="prodetails" class="section-p1">
             <div class="single-pro-image">
-                <img src="img/Produk Baru 2024/marketplace ads kompor gas shopee background merah-31.jpg" width="100%" id="MainImg" alt="">
-            <div class="small-img-group">
-                <div class="small-img-col">
-                    <img src="img/Produk Baru 2024/HC-130HM/HC-130HM.2784.png" width="100%" class="small-img" alt="">
-                </div>
-                <div class="small-img-col">
-                    <img src="img/Produk Baru 2024/HC-130HM/HC-130HM.2785.png" width="100%" class="small-img" alt="">
-                </div>
-                <div class="small-img-col">
-                    <img src="img/Produk Baru 2024/HC-130HM/HC-130HM.2787.png" width="100%" class="small-img" alt="">
-                </div>
-                <div class="small-img-col">
-                    <img src="img/Produk Baru 2024/HC-130HM/HC-130HM.2789.png" width="100%" class="small-img" alt="">
-                </div>
-            </div>
+                <img src="img/3 Oven/marketplace ads oven background merah-09.jpg" width="100%" id="MainImg" alt="">
         </div>
 
         <div class="single-pro-details">
-            <h6>Kompor Gas Coran</h6>
-            <h4>Kompor Gas Cast Iron High Pressure HC-130HM</h4>
-            <h2>Rp 435.000</h2>
+            <h6>Oven Gas</h6>
+            <h4>Oven Gas HO-GS103</h4>
+            <h2>Rp 1.545.000</h2>
             <input type="number" value="1">
             <button class="banner-box">Add To Cart</button>
             <h4>Product Details</h4>
             <span>
-                <br> - Body Cast Iron tahan 100 kg
-                <br> - Api Biru dan super kuat
-                <br> - Burner Cast Iron 
-                <br> - Knob Plastik 
-                <br> - Bahan bodi utama: Cast Iron
-                <br> - Bahan bodi ekstra: Stainless Steel
-                <br> - Bahan corong burner / kepala api: Cast Iron
-                <br> - Garansi 3 tahun biaya servis dan 1 tahun spare part pemantik
-
+                <br> - Sistem pengaman anti bocor
+                <br> - Thermometer
+                <br> - Piring kue
+                <br> - Piring kawat
+                <br> - Piring panggangan ayam
+                <br> - Knob Plastik ABS
+                <br> - Kaki anti-slip
+                <br> - Bahan bodi utama & extention: Stainless Steel 430
             </span>
         </div>
         </section>
@@ -206,37 +191,6 @@
             <p>2024, Frontend Programming - Ecommerce Website</p>
         </div>
     </footer>
-
-    <script>
-        var MainImg = document.getElementById("MainImg");
-        var smallimg = document.getElementsByClassName("small-img");
-
-        // simpan gambar awal
-        var originalSrc = MainImg.src;
-
-// fungsi untuk mengganti gambar awal menjadi gambar yang di klik saat di klik
-        smallimg[0].onclick=function(){
-            MainImg.src = smallimg[0].src;
-        }
-        smallimg[1].onclick=function(){
-            MainImg.src = smallimg[1].src;
-        }
-        smallimg[2].onclick=function(){
-            MainImg.src = smallimg[2].src;
-        }
-        smallimg[3].onclick=function(){
-            MainImg.src = smallimg[3].src;
-        }
-
-        // Fungsi untuk mengembalikan gambar ke yang asli ketika mengklik di luar gambar
-    document.addEventListener('click', function(event) {
-        // Cek apakah klik terjadi di luar gambar kecil dan gambar utama
-        if (!event.target.closest('.small-img') && event.target.id !== "MainImg") {
-            MainImg.src = originalSrc;
-        }
-    });
-    
-    </script>
 
         <script src="script.js"></script>
     </body>
